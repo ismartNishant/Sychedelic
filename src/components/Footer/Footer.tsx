@@ -4,7 +4,11 @@ import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
 import { inter, psychedelic } from "@/app/fonts";
 
-export default function Footer({ extra }) {
+interface FooterProps {
+  extra?: string;
+}
+
+export default function Footer({ extra }: FooterProps) {
   const pathname = usePathname();
 
   return (

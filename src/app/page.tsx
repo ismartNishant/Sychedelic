@@ -3,12 +3,12 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef, useState } from "react";
-import { FaArrowRight } from "react-icons/fa6";
+import { useRef} from "react";
+// import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
-import { MdOutlineEmail } from "react-icons/md";
-import { HiOutlineMenuAlt1 } from "react-icons/hi";
-import { IoClose } from "react-icons/io5";
+// import { MdOutlineEmail } from "react-icons/md";
+// import { HiOutlineMenuAlt1 } from "react-icons/hi";
+// import { IoClose } from "react-icons/io5";
 import HeadeLeft from "@/components/HeadeLeft";
 import CenterMode from "@/components/CenterMode";
 import Header from "@/components/Header/Header";
@@ -17,7 +17,7 @@ import Footer from "@/components/Footer/Footer";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  // const [menuOpen, setMenuOpen] = useState(false);
 
   const containerRef = useRef(null);
   const slide1Ref = useRef(null);

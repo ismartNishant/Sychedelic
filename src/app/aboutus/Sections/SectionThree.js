@@ -51,7 +51,7 @@ export default function SectionThree() {
           <div className="flex flex-col gap-y-2 md:w-1/2">
             <h1 className="md:text-xl text-lg font-semibold">
               Sychedelic is not just a brand;{" "}
-              <span className="text-[#FF0000]">it's a movement</span>
+              <span className="text-[#FF0000]">it&apos;s a movement</span>
             </h1>
             <p className="font-inter md:text-base text-sm">
               A movement for the self-driven, the curious, the action-takers who

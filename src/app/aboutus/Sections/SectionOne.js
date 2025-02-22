@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function SectionOne() {
   return (
     <section className="relative w-full bg-white px-4 md:py-20 py-12">
@@ -19,8 +21,7 @@ export default function SectionOne() {
           explore, enhance, and understand their{" "}
           <span className="italic text-[#FF0000]">cognitive abilities</span>{" "}
           through{" "}
-          <span className="italic text-[#FF0000]">cutting-edge technology</span>
-          .
+          <span className="italic text-[#FF0000]">cutting-edge technology</span>.
         </h1>
 
         {/* Founders and Journey Section */}
@@ -30,15 +31,17 @@ export default function SectionOne() {
             {/* Founder 1 */}
             <div>
               <div className="overflow-hidden rounded-2xl">
-                <div className="h-fit w-fit overflow-hidden rounded-2xl">
-                  <img
+                <div className="relative h-48 w-48 rounded-2xl">
+                  <Image
                     src="/bhavya.png"
                     alt="Bhavya Madan"
-                    className="w-full object-cover"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-2xl"
                   />
                 </div>
               </div>
-              <div className="">
+              <div>
                 <p className="text-md font-semibold">Founder</p>
                 <p className="text-xl font-bold">Bhavya Madan</p>
               </div>
@@ -47,15 +50,17 @@ export default function SectionOne() {
             {/* Founder 2 */}
             <div>
               <div className="overflow-hidden rounded-2xl">
-                <div className="h-fit w-fit overflow-hidden rounded-2xl">
-                  <img
+                <div className="relative h-48 w-48 rounded-2xl">
+                  <Image
                     src="/ria.png"
                     alt="Ria Rustagi"
-                    className="h-full w-full object-cover"
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-2xl"
                   />
                 </div>
               </div>
-              <div className="">
+              <div>
                 <p className="text-md font-semibold">Founder</p>
                 <p className="text-lg font-bold">Ria Rustagi</p>
               </div>

@@ -1,13 +1,19 @@
+import Image from "next/image";
+
 export default function SectionTwo() {
   return (
     <section className="relative w-full bg-[#000000] px-4 py-20 items-center justify-center flex h-screen">
-      <img
+      <Image
         src="/traced.png"
+        width={500} // Adjust width accordingly
+        height={500} // Adjust height accordingly
         className="md:absolute md:flex hidden w-2/5 bottom-0 right-0"
         alt="logo"
       />
-      <img
+      <Image
         src="/sm_trace.png"
+        width={500} // Adjust width accordingly
+        height={500} // Adjust height accordingly
         className="absolute md:hidden w-[90%] bottom-0 right-0"
         alt="logo"
       />
@@ -23,3 +29,4 @@ export default function SectionTwo() {
     </section>
   );
 }
+

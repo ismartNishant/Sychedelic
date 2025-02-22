@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-// import Image from 'next/image'
+import Image from 'next/image'
 import { psychedelic, inter } from '@/app/fonts'
 // import Popup from '../Popup/AccessPopup'
 
@@ -44,7 +44,13 @@ export default function Header () {
             </button>
           </div>
           <Link href='/' className='flex items-center md:gap-x-3 gap-x-2'>
-            <img src='/favicon.png' alt='Sychedelic Logo' className='w-6 md:w-10' />
+            <Image
+              src='/favicon.png'
+              alt='Sychedelic Logo'
+              width={40} // Adjust as needed
+              height={40} // Adjust as needed
+              className='w-6 md:w-10'
+            />
             <div className='text-white gap-0'>
               <h1 className='md:text-2xl text-lg font-medium font-psychedelic'>
                 Sychedelic

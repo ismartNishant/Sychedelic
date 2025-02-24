@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { psychedelic, inter } from '@/app/fonts'
+
 // import Popup from '../Popup/AccessPopup'
 
 export default function Header () {
@@ -16,7 +16,7 @@ export default function Header () {
 
   return (
     <header
-      className={`bg-black relative md:px-10 p-2 shadow-black shadow-lg ${psychedelic.variable} ${inter.variable} z-[100]`}
+      className={`bg-black relative md:px-10 p-2 shadow-black shadow-lg  z-[100]`}
     >
       {/* <Popup isOpen={isPopupOpen} onClose={closePopup} /> */}
       {/* Desktop Navigation */}

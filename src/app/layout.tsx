@@ -3,8 +3,8 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sychedelic",
-  description: "Developed by Tantrawave",
+  title: "Sychedelic - Amplify You | ForDreamers, Thinkers & Achievers",
+  description: "Sychedelic smart headphones enhance focus,creativity, and recovery. Join 400+ professionalsusing binaural beats for peak performance. Join thewaitlist now!",
 };
 
 export default function RootLayout({

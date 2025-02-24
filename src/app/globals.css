@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Elsie:wght@400;900&family=Irish+Grover&family=Italianno&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Elsie:wght@400;900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Sacramento&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -64,9 +64,6 @@ html {
   .font-Psychedelic{
     font-family: 'Psychedelic';
   }
-  .font-Irish-Grover{
-    font-family: "Irish Grover", serif;
-  }
   .font-Elsie{
     font-family: "Elsie", serif;
   }
@@ -81,6 +78,10 @@ html {
   }
   .font-Tanker{
     font-family: 'Tanker';
+  }
+  .font-inter {
+    font-family: "Inter", serif;
+
   }
   body {
     @apply bg-black text-foreground overflow-x-hidden font-Satoshi;

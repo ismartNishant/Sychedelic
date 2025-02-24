@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ArrowUpRight } from "lucide-react";
-import { inter, psychedelic } from "@/app/fonts";
+
 
 interface FooterProps {
   extra?: string;
@@ -13,14 +13,14 @@ export default function Footer({ extra }: FooterProps) {
 
   return (
     <div
-      className={`bg-black text-white md:px-10 px-6 py-6 ${inter.variable} ${psychedelic.variable} ${extra}`}
+      className={`bg-black text-white md:px-10 px-6 py-6  ${extra}`}
     >
       <div className="flex">
         <div className="flex flex-col md:w-1/2 space-y-4">
           <div>
             <Link
               href="/"
-              className="sm:text-7xl xl:text-[140px] text-[40px] font-psychedelic"
+              className="sm:text-7xl xl:text-[140px] text-[40px] font-Psychedelic"
             >
               Sychedelic
             </Link>

@@ -1,9 +1,7 @@
-import { inter, psychedelic } from "@/app/fonts";
-
 export default function SectionThree() {
   return (
     <section
-      className={`relative w-full bg-white px-4 py-20 h-full ${inter.variable} ${psychedelic.variable}`}
+      className={`relative w-full bg-white px-4 py-20 h-full`}
     >
       {/* Background Dots Pattern */}
       <div
@@ -19,7 +17,7 @@ export default function SectionThree() {
         <h1
           className={`text-center text-lg leading-8 md:text-2xl md:leading-10 text-black font-inter`}
         >
-          <span className="text-[#FF0000] font-psychedelic text-6xl absolute left-0 md:-ml-1">
+          <span className="text-[#FF0000] font-Psychedelic text-6xl absolute left-0 md:-ml-1">
             “
           </span>
           We realized that there’s an abundance of tools to monitor
@@ -28,7 +26,7 @@ export default function SectionThree() {
           experience - one that empowers individuals to take control of their
           emotions, amplify their potential, and fast-track their growth without
           compromising on sustainability
-          <span className="text-[#FF0000] font-psychedelic text-6xl absolute transform scale-x-[-1]">
+          <span className="text-[#FF0000] font-Psychedelic text-6xl absolute transform scale-x-[-1]">
             “
           </span>
         </h1>

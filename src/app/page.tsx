@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef} from "react";
+import { useRef } from "react";
 import Link from "next/link";
 import HeadeLeft from "@/components/HeadeLeft";
 import CenterMode from "@/components/CenterMode";
@@ -71,7 +71,7 @@ export default function Home() {
         scrollTrigger: {
           trigger: slide1Ref.current,
           start: "top top",
-          end: "+=2000%",
+          end: "+=1000%",
           pin: true,
           scrub: 3,
         },
@@ -88,7 +88,7 @@ export default function Home() {
           ],
           {
             opacity: 0,
-          }
+          },
         )
         .fromTo(
           bg1Ref.current,
@@ -98,9 +98,8 @@ export default function Home() {
             duration: 0.3,
             ease: "power2.inOut",
           },
-          "<"
-        )
-        .to(".mobile-top-header", {
+          "same"
+        ).to(".mobile-top-header", {
           opacity: 0,
           duration: 0.3,
           ease: "power2.inOut",
@@ -110,11 +109,9 @@ export default function Home() {
           { backgroundColor: "black" },
           {
             backgroundColor: "white",
-            duration: 0.3,
             ease: "none",
-          }
-        )
-        .fromTo(
+          }, "same"
+        ).fromTo(
           dottedBgRef.current,
           { autoAlpha: 0 },
           {
@@ -122,9 +119,8 @@ export default function Home() {
             duration: 0.3,
             ease: "power2.inOut",
           },
-          "<"
-        )
-        .fromTo(
+          "same"
+        ).fromTo(
           humanRef.current,
           { y: 0 },
           {
@@ -134,9 +130,8 @@ export default function Home() {
             stagger: 0.3,
             ease: "power2.inOut",
           },
-          "<"
-        )
-        .fromTo(
+          "same"
+        ).fromTo(
           humanBgRef.current,
           { autoAlpha: 0, scale: 1 },
           {
@@ -145,7 +140,7 @@ export default function Home() {
             duration: 0.3,
             ease: "power2.inOut",
           },
-          "<"
+          "same"
         )
 
         .fromTo(
@@ -157,14 +152,14 @@ export default function Home() {
             opacity: 1,
             autoAlpha: 1,
             duration: 0.4,
-            ease: "power2.out",
-          }
+            ease: "power2.inOut",
+          },
         )
 
         .fromTo(
           [".star1", ".star2", ".star3"],
-          { opacity: 0, scale: 0.5, y: 50 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "back.out(1.7)" },
+          { opacity: 0, scale: 0.2, },
+          { opacity: 1, scale: 1.1, duration: 0.8, ease: "back.out(1.7)" },
           "+=0.2"
         )
 
@@ -172,7 +167,7 @@ export default function Home() {
           opacity: 0,
         })
 
-        //slide3
+
         .fromTo(
           ".inner-slide-3",
           {
@@ -183,8 +178,10 @@ export default function Home() {
             autoAlpha: 1,
             duration: 0.4,
             ease: "power2.out",
-          }
+          },
+
         )
+
         .fromTo(
           [".slide3img1", ".slide3img2", ".slide3img3"],
           { opacity: 0, scale: 0.5, y: 50 },
@@ -192,9 +189,12 @@ export default function Home() {
           "+=0.2"
         )
 
-        .to(".inner-slide-3", { opacity: 0 })
+        .to(".inner-slide-3",
+          {
+            opacity: 0
+          },
+        )
 
-        //slide4
         .fromTo(
           ".inner-slide-4",
           {
@@ -205,18 +205,22 @@ export default function Home() {
             autoAlpha: 1,
             duration: 0.4,
             ease: "power2.out",
-          }
+          },
         )
+
         .fromTo(
           [".slide4img1", ".slide4img2", ".slide4img3"],
-          { opacity: 0, scale: 0.5, y: 50 },
-          { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "back.out(1.7)" },
-          "+=0.2"
+          { opacity: 0, scale: 0.4, },
+          { opacity: 1, scale: 1, duration: 0.8, ease: "back.out(1.7)" },
+          "-=0.2"
         )
 
-        .to(".inner-slide-4", { opacity: 0 })
+        .to(".inner-slide-4",
+          {
+            opacity: 0
+          },
+        )
 
-        //slide5
         .fromTo(
           ".inner-slide-5",
           {
@@ -227,17 +231,23 @@ export default function Home() {
             autoAlpha: 1,
             duration: 0.4,
             ease: "power2.out",
-          }
+          },
+
         )
+
         .fromTo(
           [".slide5img1", ".slide5img2", ".slide5img3"],
           { opacity: 0, scale: 0.5, y: 50 },
           { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "back.out(1.7)" },
           "+=0.2"
         )
-        .to(".inner-slide-5", { opacity: 0 })
 
-        //slide6
+        .to(".inner-slide-5",
+          {
+            opacity: 0
+          },
+        )
+
         .fromTo(
           ".inner-slide-6",
           {
@@ -251,6 +261,7 @@ export default function Home() {
             ease: "power2.out",
           }
         )
+
         .fromTo(
           [".slide6img1", ".slide6img2", ".slide6img3"],
           { opacity: 0, scale: 0.5, y: 50 },
@@ -264,11 +275,9 @@ export default function Home() {
           ".inner-slide-7",
           {
             opacity: 0,
-            y: 200,
           },
           {
             opacity: 1,
-            y: 0,
             autoAlpha: 1,
             duration: 0.4,
             ease: "power2.out",
@@ -287,11 +296,9 @@ export default function Home() {
           ".inner-slide-8",
           {
             opacity: 0,
-            y: 200,
           },
           {
             opacity: 1,
-            y: 0,
             autoAlpha: 1,
             duration: 0.4,
             ease: "power2.out",
@@ -304,36 +311,46 @@ export default function Home() {
           "+=0.2"
         )
 
-        .to(".inner-slide-8", { opacity: 0 })
-
-        .to([humanBgRef.current, slide8ImageRef1.current], {
-          autoAlpha: 0, // Hides elements
-          scale: 0, // Shrinks them to zero
+      scrollTl.add([
+        gsap.to(".inner-slide-8", { opacity: 0, duration: 0.3 }),
+        gsap.to([humanBgRef.current, slide8ImageRef1.current], {
+          autoAlpha: 0,
+          scale: 0,
           duration: 0.3,
-          stagger: 0.1,
-          ease: "back.in(1.7)",
-        })
-
-        .to(slide1Ref.current, {
+          ease: "back.in(1.7)"
+        }),
+        gsap.to(slide1Ref.current, {
           backgroundColor: "black",
-          duration: 0.3,
-          ease: "power3.inOut",
-        })
-        .to(humanRef.current, {
+          ease: "power3.inOut"
+        }),
+        gsap.to(humanRef.current, {
           scale: 0.85,
           y: "10%",
-          duration: 1,
-          stagger: 0.4,
-          ease: "power2.inOut",
-        })
-
-        //slide9
-        .to(slide9ref.current, {
+          ease: "power2.inOut"
+        }),
+        gsap.to(slide9ref.current, {
           autoAlpha: 1,
           opacity: 1,
-        })
-
-        .fromTo(
+        }),
+        gsap.fromTo(
+          slide9TextContent.current,
+          { y: -50, opacity: 0 }, // Start position above
+          { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" } // End position at normal
+        ),
+        gsap.fromTo(
+          graybgRef.current,
+          {
+            opacity: 0,
+            scale: 0.4,
+          },
+          {
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: "power2.out",
+          }
+        ),
+        gsap.fromTo(
           headphoneImageRef.current,
           {
             scale: 2,
@@ -344,88 +361,73 @@ export default function Home() {
             duration: 0.8,
             ease: "power2.out",
             autoAlpha: 1,
-          }
-        )
-        .to(logoicon2Ref.current, {
+          },
+
+        ),
+
+        gsap.to(logoicon2Ref.current, {
           autoAlpha: 1,
           opacity: 1,
           duration: 0.4,
           ease: "power2.out",
         })
+      ])
 
-        .fromTo(
-          slide9TextContent.current,
-          { y: -50, opacity: 0 }, // Start position above
-          { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" } // End position at normal
-        )
+      .fromTo(
+        slide10Ref.current,
+        {
+          y: 400,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          autoAlpha: 1,
+          duration: 0.8,
+          ease: "power2.out",
+        },
+      )
 
-        .fromTo(
-          graybgRef.current,
-          {
-            opacity: 0,
-            scale: 0.4,
-          },
-          {
-            opacity: 1,
-            scale: 1,
-            stagger: 0.5,
-            duration: 0.8,
-            ease: "power2.out",
-          }
-        )
-        .fromTo(
-          slide10Ref.current,
-          {
-            y: 400,
-            opacity: 0,
-          },
-          {
-            y: 0,
-            opacity: 1,
-            autoAlpha: 1,
-            duration: 0.8,
-            ease: "power2.out",
-          }
-        )
-
-        .fromTo(
+      scrollTl.add([
+        gsap.fromTo(
           ".inner-slide-10 p",
           { opacity: 0, scale: 0.8 },
-          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" }
-        )
+          { opacity: 1, scale: 1, duration: 0.8, ease: "power2.out" },
+        ),
 
-        .fromTo(
+        gsap.fromTo(
           ".slide10-text",
           { opacity: 0, y: 50 },
-          { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" },
-          "+=0.3" // Delay after previous animation
-        )
-
-        .fromTo(
+          { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, 
+        ),
+        gsap.fromTo(
           ".inner-slide-10 .arrow-img",
           { opacity: 0, scale: 0.5, y: 20 },
           { opacity: 1, scale: 1, y: 0, duration: 0.8, ease: "power2.out" },
-          "+=0.3"
         )
+      ])
+
         .to(slide10Ref.current, {
           height: "100%",
         })
+
         .to(
           ".slide10-text",
           { scale: 1.2, duration: 0.8, ease: "power2.out" },
-          "+=0.3"
+          
         )
-
         .to(".inner-slide-10 .arrow-img", {
           duration: 0.8,
           width: 500,
           ease: "power2.out",
-        })
+        },)
+        
         .to(dottedBgRef.current, {
           opacity: 0.5,
           autoAlpha: 1,
           zIndex: 80,
         })
+
         .fromTo(
           ".headxl-img",
           { opacity: 0, duration: 0.8, ease: "power2.out", scale: 1.5 },
@@ -437,6 +439,7 @@ export default function Home() {
           },
           "+=0.3"
         )
+
         .fromTo(
           ".waves",
           {
@@ -453,6 +456,7 @@ export default function Home() {
             ease: "power2.out",
           }
         )
+
         .to(
           [
             ".headxl-img",
@@ -468,60 +472,55 @@ export default function Home() {
             ease: "power2.out",
           }
         )
-        .set(
-          [
-            ".headxl-img",
-            ".waves",
-            ".inner-slide-10 .arrow-img",
-            ".slide10-text",
-            ".inner-slide-10 p",
-          ],
-          {
-            display: "none",
-          }
-        )
-        .to(humanRef.current, {
-          duration: 0.8,
-          y: "10%",
-          ease: "power2.out",
-          scale: 0.8,
-          zIndex: 80,
-        })
-        .fromTo(
-          ".slide11-text",
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-          }
-        )
-        .fromTo(
-          ".slide11-left-img",
-          {
-            x: -500,
-            opacity: 0,
-          },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 0.8,
+
+        scrollTl.add([ 
+          gsap.to(humanRef.current, {
+            y: "10%",
             ease: "power2.out",
-          }
-        )
-        .fromTo(
-          ".slide11-right-img",
-          {
-            x: "100%",
-            opacity: 0,
-          },
-          {
-            x: 0,
-            opacity: 1,
-            duration: 1,
-            ease: "power2.out",
-          }
-        )
+            scale: 0.8,
+            zIndex: 80,
+          }),
+          gsap.fromTo(
+            ".slide11-text",
+            {
+              opacity: 0,
+            },
+            {
+              opacity: 1,
+            },
+          ),
+          gsap.fromTo(
+            ".slide11-left-img",
+            {
+              x: -500,
+              opacity: 0,
+            },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 0.8,
+              ease: "power2.out",
+            },
+          ),
+          gsap.fromTo(
+            ".slide11-right-img",
+            {
+              x: "100%",
+              opacity: 0,
+            },
+            {
+              x: 0,
+              opacity: 1,
+              duration: 1,
+              ease: "power2.out",
+            },
+  
+          )
+        ])
+        
+
+        
+      
 
         .to([".inner-slide-11 ", humanRef.current], {
           opacity: 0,
@@ -564,10 +563,8 @@ export default function Home() {
             opacity: 1,
           }
         )
-        .from(".footer-logo", {
-          opacity: 0,
-          y: 200,
-        });
+        
+
     });
 
     return () => {
@@ -691,13 +688,11 @@ export default function Home() {
             </Link>
           </button>
         </div>
-        <div
-          ref={headphoneImageRef}
-          className="absolute  bottom-8 sm:bottom-20 2xl:bottom-36 left-[25%] sm:left-[32%] xl:left-[41%]  z-[76] flex justify-center items-center"
-        >
+        <div className="absolute  bottom-8 sm:bottom-20 2xl:bottom-36 left-[25%] sm:left-[32%] xl:left-[41%]  z-[76] flex justify-center items-center">
           <div className="relative">
             {/* Headphone Image */}
             <Image
+              ref={headphoneImageRef}
               width={100}
               height={100}
               src="/img/headphone1.svg"
@@ -935,74 +930,6 @@ export default function Home() {
           ref={slide9ref}
           className="slide-9 absolute w-full h-full top-0 overflow-hidden"
         >
-          {/* <header className="bg-[#000] text-white flex justify-between items-center relative top-0 px-5 xl:px-24 p-3 xl:py-4 z-[99]">
-            <div className="flex gap-4 items-center">
-              <button
-                className="block xl:hidden text-3xl"
-                onClick={() => setMenuOpen(true)}
-              >
-                <HiOutlineMenuAlt1 />
-              </button>
-
-              <Link href="/" className="flex items-center">
-                <Image
-                  src="/img/logo.svg"
-                  width={100}
-                  height={100}
-                  alt="logo"
-                  className="header-logo w-20 xl:w-48"
-                />
-              </Link>
-            </div>
-            <button className="header-button font-Psychedelic text-sm xl:text-lg bg-gradient-to-r from-purple-500 via-blue-500 to-purple-500 rounded-full px-2 py-1 xl:px-6 xl:py-2 group relative">
-              <span className="relative inline-flex overflow-hidden">
-                <div className="translate-y-0 skew-y-0 transition duration-500 group-hover:translate-y-[-160%] group-hover:skew-y-12">
-                  Access exclusive club
-                </div>
-                <div className="absolute translate-y-[164%] skew-y-12 transition duration-500 group-hover:translate-y-0 group-hover:skew-y-0">
-                  Access exclusive club
-                </div>
-              </span>
-            </button>
-
-            <div
-              className={`fixed top-0 left-0 w-64 h-full bg-white text-black transition-transform duration-300 z-[100] ${menuOpen ? "translate-x-0" : "-translate-x-full"
-                }`}
-            >
-              <button
-                className="absolute top-4 right-4 text-3xl"
-                onClick={() => setMenuOpen(false)}
-              >
-                <IoClose />
-              </button>
-
-              <ul className="flex flex-col gap-8 p-8 text-2xl font-semibold h-full justify-end ">
-                {["Home", "Blogs", "Career", "About us"].map((item, index) => (
-                  <li
-                    key={index}
-                    className="hover:text-[#FE0055] cursor-pointer duration-300 ease-in-out transition-all"
-                  >
-                    <Link href={`/${item === "Home" ? "" : item.toLowerCase().replace(/\s+/g, "-")}`}>
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <ul className="hidden xl:flex items-center gap-8 text-lg font-semibold">
-              {["Blogs", "Career", "About us"].map((item, index) => (
-                <li
-                  key={index}
-                  className="hover:text-[#FE0055] cursor-pointer duration-300 ease-in-out transition-all"
-                >
-                  <Link href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}>
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </header> */}
           <Header />
 
           {/* Text Content */}
@@ -1122,132 +1049,6 @@ export default function Home() {
             <h1 className="absolute w-full amplify-you top-[25%] sm:top-[30%] left-1/2 transform  -translate-x-1/2 text-6xl sm:text-9xl xl:text-[140px] font-Satoshi font-bold text-black text-center">
               Amplify you
             </h1>
-
-            {/* <footer className="bg-black p-4 sm:p-10 absolute bottom-0  w-full grid  gap-10 sm:gap-20 xl:gap-10 grid-cols-3 justify-between  text-white">
-              <div className="col-span-2 space-y-2">
-                <h1 className=" text-5xl sm:text-8xl lg:text-9xl font-Psychedelic ">
-                  Sychedelic.
-                </h1>
-                <div className="flex flex-wrap gap-1 sm:gap-20 xl:gap-5  items-center  text-[8px] xl:text-sm">
-                  <Link
-                    href="/"
-                    className="px-2 py-0.5 sm:px-4 sm:py-1 border rounded-full border-neutral-600  hover:scale-105 duration-300 ease-in-out transition-all hover:text-[#FE0055] "
-                  >
-                    Youtube
-                  </Link>
-                  <Link
-                    href="/"
-                    className="px-4 py-1 border rounded-full border-neutral-600 hover:scale-105 duration-300 ease-in-out transition-all hover:text-[#FE0055]"
-                  >
-                    Instagram
-                  </Link>
-                  <Link
-                    href="/"
-                    className="px-4 py-1 border rounded-full border-neutral-600 hover:scale-105 duration-300 ease-in-out transition-all hover:text-[#FE0055]"
-                  >
-                    X
-                  </Link>
-                  <Link
-                    href="/"
-                    className="px-4 py-1 border rounded-full border-neutral-600 hover:scale-105 duration-300 ease-in-out transition-all hover:text-[#FE0055]"
-                  >
-                    LinkedIn
-                  </Link>
-                  <p className=" flex items-center gap-2">
-                    <MdOutlineEmail className="text-2xl" /> info@logoipsum.com
-                  </p>
-                </div>
-              </div>
-              <div className="cols-span-1 flex text-sm sm:text-lg xl:text-2xl font-semibold gap-5">
-                <div className=" flex lg:hidden flex-col  gap-2 ">
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Home
-                  </Link>
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Blogs
-                  </Link>
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Career
-                  </Link>
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    About us
-                  </Link>
-                </div>
-                <div className="hidden lg:flex flex-col gap-5 px-10 ">
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Home
-                  </Link>
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Blogs
-                  </Link>
-                </div>
-                <div className="hidden lg:flex flex-col gap-5 px-10">
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Career
-                  </Link>
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    About us
-                  </Link>
-                  <Link
-                    href="/"
-                    className="relative cursor-pointer hover:text-[#FE0055] duration-300 ease-in-out transition-all group"
-                  >
-                    <span className="absolute -rotate-45 left-[-40px] top-1 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-hover:text-white">
-                      <FaArrowRight />
-                    </span>
-                    Contact
-                  </Link>
-                </div>
-              </div>
-            </footer> */}
             <Footer extra="absolute bottom-0 w-full" />
           </div>
         </div>

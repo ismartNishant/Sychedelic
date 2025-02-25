@@ -12,7 +12,7 @@ export default function Footer({ extra }: FooterProps) {
   const pathname = usePathname();
 
   return (
-    <div
+    <footer
       className={`bg-black text-white md:px-10 px-6 py-6  ${extra}`}
     >
       <div className="flex">
@@ -151,6 +151,6 @@ export default function Footer({ extra }: FooterProps) {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
